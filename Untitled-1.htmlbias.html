@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta Final</title>
+</head>
+<body>
+
+<script>
+    // Função para obter a idade do usuário
+    function obterIdade() {
+        var idade = prompt("Qual é a sua idade?");
+        return idade;
+    }
+
+    // Função principal
+    function verificarIdade() {
+        // Obter a idade do usuário
+        var idadeUsuario = parseInt(obterIdade());
+
+        // Verificar se a idade é um número válido
+        if (isNaN(idadeUsuario) || idadeUsuario <= 0) {
+            alert("Por favor, digite uma idade válida.");
+            return;
+        }
+
+        // Usar if-else para gerar uma resposta com base na faixa etária
+        if (idadeUsuario < 18) {
+            alert("Você é menor de idade.");
+        } else if (idadeUsuario >= 18 && idadeUsuario < 60) {
+            alert("Você é um adulto.");
+        } else {
+            alert("Você é um idoso.");
+        }
+    }
+
+    // Chamar a função principal quando a página carregar
+    verificarIdade();
+</script>
+
+</body>
+</html>
